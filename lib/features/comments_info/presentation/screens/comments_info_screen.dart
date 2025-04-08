@@ -1,4 +1,5 @@
-import 'package:comment_management/features/comments_info/presentation/widgets/comment_card.dart';
+import 'package:comment_management/core/router/app_routes_names.dart';
+import 'package:comment_management/features/comments_info/presentation/widgets/comment_info_card.dart';
 import 'package:flutter/material.dart';
 
 class CommentsInfoScreen extends StatefulWidget {
@@ -18,7 +19,10 @@ class _CommentsInfoScreenState extends State<CommentsInfoScreen> {
         child: Column(
           children: [
             // "Ayat" Card
-            CommentCard(
+            CommentInfoCard(
+              onTap: () {
+                Navigator.of(context).pushNamed(AppRoutesNames.commentsIndexScreen);
+              },
               title: 'Ayat',
               allCount: 120,
               acceptedCount: 90,
@@ -27,7 +31,10 @@ class _CommentsInfoScreenState extends State<CommentsInfoScreen> {
             ),
             const SizedBox(height: 16),
             // "Articles" Card
-            CommentCard(
+            CommentInfoCard(
+              onTap: () {
+                Navigator.of(context).pushNamed(AppRoutesNames.commentsIndexScreen);
+              },
               title: 'Articles',
               allCount: 200,
               acceptedCount: 150,
@@ -36,7 +43,10 @@ class _CommentsInfoScreenState extends State<CommentsInfoScreen> {
             ),
             const SizedBox(height: 16),
             // "Comments" Card
-            CommentCard(
+            CommentInfoCard(
+              onTap: () {
+                Navigator.of(context).pushNamed(AppRoutesNames.commentsIndexScreen);
+              },
               title: 'Tags',
               allCount: 350,
               acceptedCount: 300,
