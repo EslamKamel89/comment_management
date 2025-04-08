@@ -1,7 +1,7 @@
 import 'package:comment_management/core/router/app_routes_names.dart';
 import 'package:comment_management/core/router/middleware.dart';
-import 'package:comment_management/core/screens_example/splash_screen/splash_screen.dart';
-import 'package:comment_management/core/widgets/ui_components_screen.dart';
+import 'package:comment_management/features/comments_info/presentation/screens/comments_info_screen.dart';
+import 'package:comment_management/features/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
@@ -13,9 +13,9 @@ class AppRouter {
     switch (routeName) {
       case AppRoutesNames.splashScreen:
         return CustomPageRoute(builder: (context) => const SplashScreen(), settings: routeSettings);
-      case AppRoutesNames.uiComponentScreen:
+      case AppRoutesNames.commentsInfoScreen:
         return CustomPageRoute(
-          builder: (context) => const UiComponentScreen(),
+          builder: (context) => const CommentsInfoScreen(),
           settings: routeSettings,
         );
 
